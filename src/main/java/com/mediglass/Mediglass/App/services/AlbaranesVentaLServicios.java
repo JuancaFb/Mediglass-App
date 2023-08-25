@@ -11,12 +11,12 @@ import java.util.ArrayList;
 public class AlbaranesVentaLServicios {
 
     @Autowired
-    AlbaranesVentaLDAO albaranesVentaRepositorio;
+    AlbaranesVentaLDAO albaranesVentaLRepositorio;
 
     public ArrayList<AlbaranesVentaL> obtenerAlbaranesVenta() {
-        return (ArrayList<AlbaranesVentaL>) albaranesVentaRepositorio.findAllByOrderNDocDol();
+        return (ArrayList<AlbaranesVentaL>) albaranesVentaLRepositorio.findAllByOrderNDocDol();
     }
 
-    public ArrayList<AlbaranesVentaL> obtenerUltimoPrecioArticulos(String cdgoartdol) { return (ArrayList<AlbaranesVentaL>) albaranesVentaRepositorio.findUltimoPrecioArticulo(cdgoartdol); }
+    public ArrayList<AlbaranesVentaL> obtenerUltimoPrecioArticulos(String cdgoartdol) { return (ArrayList<AlbaranesVentaL>) albaranesVentaLRepositorio.findUltimoPrecioArticulo(cdgoartdol); }
 
 }

@@ -14,25 +14,15 @@ import java.util.ArrayList;
 public class AlbaranesCompraLController {
 
     @Autowired
-    private AlbaranesCompraLServicios albaranesCompraServicios;
+    private AlbaranesCompraLServicios albaranesCompraLServicios;
 
     @GetMapping()
     public ArrayList<AlbaranesCompraL> obtenerAlbaranesCompra(){
-        return albaranesCompraServicios.obtenerAlbaranesCompra();
+        return albaranesCompraLServicios.obtenerAlbaranesCompra();
     }
 
     @GetMapping("/{cdgoartdol}")
     public ArrayList<AlbaranesCompraL> obtenerUltimoPrecioArticulos(@PathVariable String cdgoartdol){
-        return albaranesCompraServicios.obtenerUltimoPrecioArticulos(cdgoartdol);
+        return albaranesCompraLServicios.obtenerUltimoPrecioArticulos(cdgoartdol);
     }
-
-    @GetMapping("/{fechaInicio}/{fechaFin}")
-    public ArrayList<AlbaranesCompraL> obtenerAlbaranesEntreFechas(@PathVariable String fechaInicio, @PathVariable String fechaFin){
-        return albaranesCompraServicios.obtenerAlbaranesEntreFechas(fechaInicio, fechaFin);
-    }
-
-
-
-
-
 }

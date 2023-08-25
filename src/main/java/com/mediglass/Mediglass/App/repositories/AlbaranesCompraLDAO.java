@@ -18,7 +18,4 @@ public interface AlbaranesCompraLDAO extends JpaRepository<AlbaranesCompraL, Int
 
     @Query(value = "select * from falbacoml f2 where fedocdol = (select max(fedocdol) from falbacoml f where cdgoartdol = :cdgoartdol) and cdgoartdol = :cdgoartdol", nativeQuery = true)
     ArrayList<AlbaranesCompraL> findUltimoPrecioArticulo(@Param("cdgoartdol") String cdgoartdol);
-
-    @Query("FROM AlbaranesCompraL where fedocdol between :fechaInicio and :fechaFin order by fedocdol")
-    ArrayList<AlbaranesCompraL> findEntreFechas(@Param("fechaInicio") String fechaInicio, @Param("fechaFin") String fechaFin);
 }
