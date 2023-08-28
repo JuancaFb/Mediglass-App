@@ -17,8 +17,8 @@ public class UsuarioServicios {
         return (ArrayList<Usuarios>) usuarioRepositorio.findAll();
     }
 
-    public boolean verificarUserYPass(Integer numuser, String contra) {
-        ArrayList<Usuarios> lista = usuarioRepositorio.findByUseryPass(numuser, contra);
+    public boolean verificarUserYPass(Integer numuser, String contrasena) {
+        ArrayList<Usuarios> lista = usuarioRepositorio.findByUseryPass(numuser, contrasena);
         return !lista.isEmpty();
     }
 

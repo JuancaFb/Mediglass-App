@@ -14,10 +14,10 @@ import java.util.ArrayList;
 @Transactional
 public interface UsuariosDAO extends JpaRepository<Usuarios, Integer> {
 
-    @Query("FROM Usuarios WHERE user = :user and pass = :contra")
-    ArrayList<Usuarios> findByUseryPass(@Param("user") Integer usuario, @Param("contra") String contra);
+    @Query("FROM Usuarios WHERE numuser = :numuser and contrasena = :contrasena")
+    ArrayList<Usuarios> findByUseryPass(@Param("numuser") Integer numuser, @Param("contrasena") String contrasena);
 
-    @Query("FROM Usuarios WHERE user = :user")
-    ArrayList<Usuarios> findByUser(@Param("user") Integer usuario);
+    @Query("FROM Usuarios WHERE numuser = :numuser")
+    ArrayList<Usuarios> findByUser(@Param("numuser") Integer numuser);
 
 }

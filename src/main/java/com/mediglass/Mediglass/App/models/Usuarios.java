@@ -28,12 +28,12 @@ public class Usuarios implements Serializable {
     private String alias;
 
     @Getter @Setter @Column(name="numuser")
-    private Integer user;
+    private Integer numuser;
 
     @Getter @Setter @Column(name="contrasena")
-    private String pass;
+    private String contrasena;
 
     @Getter @Setter @Column(name="user")
-    private String tipousuario;
+    private String user;
 
 }
