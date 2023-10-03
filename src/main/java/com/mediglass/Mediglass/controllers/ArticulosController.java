@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/articulos")
+@RequestMapping("articulos")
 public class ArticulosController {
 
     @Autowired

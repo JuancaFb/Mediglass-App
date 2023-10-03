@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/albaranesventac")
+@RequestMapping("albaranesventac")
 public class AlbaranesVentaCController {
 }

@@ -1,16 +1,16 @@
 package com.mediglass.Mediglass.controllers;
 
-import com.mediglass.Mediglass.services.UsuarioServicios;
+import com.mediglass.Mediglass.services.UsuariosServicios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/login")
+@RequestMapping("login")
 public class LoginController {
 
     @Autowired
-    private UsuarioServicios usuarioServicios;
+    private UsuariosServicios usuarioServicios;
 
     @PostMapping("/{numuser}/{contrasena}")
     public boolean login(@PathVariable Integer numuser,@PathVariable String contrasena){

@@ -1,6 +1,5 @@
 package com.mediglass.Mediglass.controllers;
 
-import com.mediglass.Mediglass.models.AlbaranesCompraC;
 import com.mediglass.Mediglass.models.AlbaranesCompraL;
 import com.mediglass.Mediglass.services.AlbaranesCompraLServicios;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/albaranescompral")
+@RequestMapping("albaranescompral")
 public class AlbaranesCompraLController {
 
     @Autowired

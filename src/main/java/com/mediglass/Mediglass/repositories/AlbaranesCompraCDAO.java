@@ -13,6 +13,9 @@ import java.util.ArrayList;
 @Transactional
 public interface AlbaranesCompraCDAO extends JpaRepository<AlbaranesCompraC, Integer> {
 
+    @Query("FROM AlbaranesCompraC")
+    ArrayList<AlbaranesCompraC> findAllByOrderNDoc();
+
     @Query("FROM AlbaranesCompraC where fealbadoc between :fechaInicio and :fechaFin order by fealbadoc")
     ArrayList<AlbaranesCompraC> findEntreFechas(@Param("fechaInicio") String fechaInicio, @Param("fechaFin") String fechaFin);
 
