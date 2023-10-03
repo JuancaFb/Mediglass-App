@@ -9,16 +9,11 @@ import java.util.ArrayList;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("albaranescomprac")
+@RequestMapping("/albaranescomprac")
 public class AlbaranesCompraCController {
 
     @Autowired
     private AlbaranesCompraCServicios albaranesCompraCServicios;
-
-    @GetMapping()
-    public ArrayList<AlbaranesCompraC> obtenerAlbaranesCompra(){
-        return albaranesCompraCServicios.obtenerAlbaranesCompraC();
-    }
 
     @GetMapping("/{fechaInicio}/{fechaFin}")
     public ArrayList<AlbaranesCompraC> obtenerAlbaranesEntreFechas(@PathVariable String fechaInicio, @PathVariable String fechaFin){
