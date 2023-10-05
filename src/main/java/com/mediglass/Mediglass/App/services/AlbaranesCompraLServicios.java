@@ -17,6 +17,10 @@ public class AlbaranesCompraLServicios {
         return (ArrayList<AlbaranesCompraL>) albaranesCompraLRepositorio.findAllByOrderNDocDol();
     }
 
+    public ArrayList<AlbaranesCompraL> obtenerAlbaranById(Integer ndocdol){
+        return (ArrayList<AlbaranesCompraL>) albaranesCompraLRepositorio.findByIdAlbaran(ndocdol);
+    }
+
     public ArrayList<AlbaranesCompraL> obtenerUltimoPrecioArticulos(String cdgoartdol) { return (ArrayList<AlbaranesCompraL>) albaranesCompraLRepositorio.findUltimoPrecioArticulo(cdgoartdol); }
 
 }
