@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 
 @RestController
 @RequestMapping("albaranescomprac")
@@ -19,5 +19,10 @@ public class AlbaranesCompraCController {
     @GetMapping("/{fechaInicio}/{fechaFin}")
     public ArrayList<AlbaranesCompraC> obtenerAlbaranesEntreFechas(@PathVariable String fechaInicio, @PathVariable String fechaFin){
         return albaranesCompraCServicios.obtenerAlbaranesEntreFechas(fechaInicio, fechaFin);
+    }
+
+    @GetMapping("/{id}")
+    public AlbaranesCompraC ObtenerDatosDeAlbaran(@PathVariable Integer id){
+        return albaranesCompraCServicios.ObtenerDatosDeAlbaran(id);
     }
 }

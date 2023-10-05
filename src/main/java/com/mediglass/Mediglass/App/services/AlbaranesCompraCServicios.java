@@ -15,4 +15,7 @@ public class AlbaranesCompraCServicios {
 
     public ArrayList<AlbaranesCompraC> obtenerAlbaranesEntreFechas(String fechaInicio, String fechaFin) { return (ArrayList<AlbaranesCompraC>) albaranesCompraCRepositorio.findEntreFechas(fechaInicio, fechaFin); }
 
+    public AlbaranesCompraC ObtenerDatosDeAlbaran(Integer id){
+        return (AlbaranesCompraC) albaranesCompraCRepositorio.ObtenerDatosDeAlbaran(id);
+    }
 }

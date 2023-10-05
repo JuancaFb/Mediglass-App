@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("clientes")
 public class ClientesController {

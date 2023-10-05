@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 
 @RestController
 @RequestMapping("albaranescompral")
@@ -19,6 +19,11 @@ public class AlbaranesCompraLController {
     @GetMapping()
     public ArrayList<AlbaranesCompraL> obtenerAlbaranesCompra(){
         return albaranesCompraLServicios.obtenerAlbaranesCompra();
+    }
+
+    @PostMapping("/{ndocdol}")
+    public ArrayList<AlbaranesCompraL> obtenerAlbaranById(@PathVariable Integer ndocdol){
+        return albaranesCompraLServicios.obtenerAlbaranById(ndocdol);
     }
 
     @GetMapping("/{cdgoartdol}")

@@ -4,7 +4,7 @@ import com.mediglass.Mediglass.App.services.UsuarioServicios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 
 @RestController
 @RequestMapping("login")
